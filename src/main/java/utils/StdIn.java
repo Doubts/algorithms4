@@ -11,12 +11,12 @@ import java.util.regex.Pattern;
  * Created by zhanjiahan on 17-5-26.
  * Java I/O工具,能够从命令行和文件读取,参照algs4所写
  */
-public class StdIn {
+public final class StdIn {
 
     private static Scanner scanner;
 
     // 编码类型 utf-8
-    private static final String CHARSET_NAME = "utf-8";
+    private static final String CHARSET_NAME = "UTF-8";
 
     // 假设 language = English, country = China for consistency with System.out
     private static final Locale LOCALE = Locale.CHINESE;
