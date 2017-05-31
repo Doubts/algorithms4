@@ -214,7 +214,7 @@ public final class StdStats {
         return Math.sqrt(var(a, lo, hi));
     }
 
-    // population standard deviation
+    // population standard deviation 标准方差
     public static double stddevp(double[] a) {
         validateNotNull(a);
         return Math.sqrt(varp(a));
