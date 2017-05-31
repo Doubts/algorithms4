@@ -15,9 +15,10 @@ import java.net.URL;
 import java.util.*;
 
 /**
- *  Created by zhanjiahan on 17-5-26.
+ * StdDraw: Drawing
+ * Created by zhanjiahan on 17-5-26.
  */
-public class StdDraw implements ActionListener, MouseListener, MouseMotionListener, KeyListener {
+public final class StdDraw implements ActionListener, MouseListener, MouseMotionListener, KeyListener {
 
     public static final Color BLACK = Color.BLACK;
     public static final Color BLUE = Color.BLUE;
