@@ -6,7 +6,8 @@ import java.io.UnsupportedEncodingException;
 import java.util.Locale;
 
 /**
- *  Created by zhanjiahan on 17-5-26.
+ * StdOut: Output
+ * Created by zhanjiahan on 17-5-26.
  */
 public final class StdOut {
 
