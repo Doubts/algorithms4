@@ -6,7 +6,7 @@ import utils.StdRandom;
 
 /**
  * Created by zhanjiahan on 17-5-31.
- * Knuth: Knuth 洗牌
+ * Knuth: Knuth 洗牌(数组的重排)
  */
 public class Knuth {
     private Knuth() {}
