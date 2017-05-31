@@ -1,6 +1,7 @@
 package utils;
 
 /**
+ * StdArrayIO: Array IO
  * Created by zhanjiahan on 17-5-31.
  */
 public final class StdArrayIO {
