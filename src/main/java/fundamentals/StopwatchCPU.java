@@ -1,14 +1,16 @@
-package utils;
+package fundamentals;
+
+import utils.StdOut;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadMXBean;
 
 /**
- * StopwatchCPU : watch cpu time
- * Created by zhanjiahan on 17-5-31.
+ * StopwatchCPU: stop watch cpu
+ * Created by zhanjiahan on 17-6-8.
  */
 public class StopwatchCPU {
-    private static final double NANOSECONDS_PER_SECOND = 1000000000;
+    private static final double NANOSECOND_PER_SECOND = 1000000000;
 
     private final ThreadMXBean threadTimer;
     private final long start;
@@ -20,28 +22,26 @@ public class StopwatchCPU {
 
     public double elapsedTime() {
         long now = threadTimer.getCurrentThreadCpuTime();
-        return (now - start) / NANOSECONDS_PER_SECOND;
+        return (now - start) / NANOSECOND_PER_SECOND;
     }
 
     public static void main(String[] args) {
         int n = Integer.parseInt(args[0]);
-
-        // sum of square roots of integers from 1 to n using Math.sqrt(x).
         StopwatchCPU timer1 = new StopwatchCPU();
-        double sum1 = 0.0;
-        for (int i = 1; i <= n; i++) {
-            sum1 += Math.sqrt(i);
+        double sum = 0.0;
+        for (int i = 0; i < n; i++) {
+            sum += Math.sqrt(i);
         }
         double time1 = timer1.elapsedTime();
-        StdOut.printf("%e (%.2f seconds)\n", sum1, time1);
+        StdOut.printf("%e (%.2f seconds)\n", sum, time1);
 
-        // sum of square roots of integers from 1 to n using Math.pow(x, 0.5).
         StopwatchCPU timer2 = new StopwatchCPU();
         double sum2 = 0.0;
-        for (int i = 1; i <= n; i++) {
-            sum2 += Math.pow(i, 0.5);
+        for (int i = 0; i < n; i++) {
+            sum2 += Math.sqrt(i);
         }
-        double time2 = timer2.elapsedTime();
-        StdOut.printf("%e (%.2f seconds)\n", sum2, time2);
+        double time2 = timer1.elapsedTime();
+        StdOut.printf("%e (%.2f seconds)", sum2, time2);
     }
+
 }
