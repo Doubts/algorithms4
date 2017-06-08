@@ -1,8 +1,10 @@
-package utils;
+package fundamentals;
+
+import utils.StdOut;
 
 /**
- * Stopwatch: watch system time
- * Created by zhanjiahan on 17-5-31.
+ * Stopwatch: Stop Watch
+ * Created by zhanjiahan on 17-6-8.
  */
 public class Stopwatch {
     private final long start;
@@ -19,20 +21,18 @@ public class Stopwatch {
     public static void main(String[] args) {
         int n = Integer.parseInt(args[0]);
 
-        // sum of square roots of integers from 1 to n using Math.sqrt(x).
         Stopwatch timer1 = new Stopwatch();
         double sum1 = 0.0;
-        for (int i = 1; i <= n; i++) {
+        for (int i = 0; i < n; i++) {
             sum1 += Math.sqrt(i);
         }
         double time1 = timer1.elapsedTime();
         StdOut.printf("%e (%.2f seconds)\n", sum1, time1);
 
-        // sum of square roots of integers from 1 to n using Math.pow(x, 0.5).
         Stopwatch timer2 = new Stopwatch();
         double sum2 = 0.0;
-        for (int i = 1; i <= n; i++) {
-            sum2 += Math.pow(i, 0.5);
+        for (int i = 0; i < n; i++) {
+            sum2 += Math.sqrt(i);
         }
         double time2 = timer2.elapsedTime();
         StdOut.printf("%e (%.2f seconds)\n", sum2, time2);
