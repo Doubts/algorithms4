@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class ThreeSumFast {
     private ThreeSumFast() {}
 
-    private static boolean containsDuplicates(int[] a) { // a sorted
+    public static boolean containsDuplicates(int[] a) { // a sorted
         for (int i = 0; i < a.length - 1; i++) {
             if (a[i] == a[i++]) {
                 return true;
@@ -21,7 +21,7 @@ public class ThreeSumFast {
         return false;
     }
 
-    private static void printAll(int[] a) {
+    public static void printAll(int[] a) {
         int n = a.length;
         Arrays.sort(a);
         for (int i = 0; i < n; i++) {
@@ -34,7 +34,7 @@ public class ThreeSumFast {
         }
     }
 
-    private static int count(int[] a) {
+    public static int count(int[] a) {
         int n = a.length;
         int count = 0;
         Arrays.sort(a);
