@@ -33,7 +33,7 @@ public final class StdIn {
 
     // 标准输入是否还有未读完的数据
     public static boolean isEmpty() {
-        return scanner.hasNext();
+        return !scanner.hasNext();
     }
 
     public static boolean hasNextLine() {
